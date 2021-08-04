@@ -32,13 +32,13 @@ nav {
 
 article {
   margin-bottom: 4rem;
-  
+
   footer {
     font-style: italic;
     color: $footer-color;
-    
+
     &:before {
-        content: '— ';    
+        content: '— ';
     }
   }
 }
@@ -51,6 +51,10 @@ p, img {
   margin: 0 0 1rem 0;
 }
 
+p {
+  /* font-family: sans-serif; */
+}
+
 /* Headers */
 
 h1, h2, h3 {
@@ -60,7 +64,7 @@ h1, h2, h3 {
 
 h1 {
   font-size: 1.5rem;
-  
+
   a, a:hover, a:active {
     font-size: 1.5rem;
     color: $primary-color;
@@ -75,12 +79,12 @@ h3 {
 a {
   color: $link-color;
   text-decoration: none;
-  
+
   &:hover, &:active {
     color: $link-color;
     text-decoration: underline;
   }
-  
+
   &:active {
     color: $link-active-color;
   }
@@ -89,15 +93,26 @@ a {
 /* Lists */
 
 ul {
-  list-style: none;
+  list-style-position: inside;
 }
 
 li {
   margin-bottom: 0.83em;
-  
+
+  /*
   &:before {
     color: $link-color;
     content: '— ';
+  }*/
+  &:marker {
+    color: red;
   }
+}
+
+/* Nested lists */
+/* NOTE: Nested lists work 3 levels deep (ie. root, level 1, level 2) */
+ul ul {
+  padding-left: 2em;
+  margin-top: 0.83em;
 }
 
