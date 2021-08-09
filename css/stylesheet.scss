@@ -1,13 +1,15 @@
 $primary-color: #333;
-$footer-color: #777;
-$link-color: #06c;
-$link-active-color: #036;
+$footer-color: #888;
+$link-color: #066;
+$link-active-color: #033;
 
 /* Layout */
-
-*, html, body {
+* {
   padding: 0;
-  font-family: "Courier New", Courier, monospace;
+}
+
+html, body {
+  font-family: -apple-system, Helvetica, 'Open Sans', Roboto, Verdana, sans-serif
 }
 
 :focus { outline: none; }
@@ -15,7 +17,8 @@ $link-active-color: #036;
 ::-moz-focus-inner { border: 0; }
 
 html, body {
-  font-size: 13px;
+  font-size: 17px;
+  line-height: 1.61em;
   color: $primary-color; }
 
 .container {
@@ -57,7 +60,8 @@ p {
 
 /* Headers */
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5 {
+  font-family: "Lato", “Lucida Grande”, Tahoma, Sans-Serif;
   color: $primary-color;
   margin: 0.83em 0;
 }
@@ -116,3 +120,12 @@ ul ul {
   margin-top: 0.83em;
 }
 
+/* Footer nav, maybe nav in general */
+.nav {
+  font-size: 0.9rem;
+  font-family: monospace;
+}
+
+.article-date {
+  color: $footer-color;
+}
