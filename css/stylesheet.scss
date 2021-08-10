@@ -4,10 +4,6 @@ $link-color: #066;
 $link-active-color: #033;
 
 /* Layout */
-* {
-  padding: 0;
-}
-
 html, body {
   font-family: -apple-system, Helvetica, 'Open Sans', Roboto, Verdana, sans-serif
 }
@@ -19,7 +15,8 @@ html, body {
 html, body {
   font-size: 17px;
   line-height: 1.61em;
-  color: $primary-color; }
+  color: $primary-color;
+}
 
 .container {
   max-width: 1100px;
@@ -54,9 +51,6 @@ p, img {
   margin: 0 0 1rem 0;
 }
 
-p {
-  /* font-family: sans-serif; */
-}
 
 /* Headers */
 
@@ -96,13 +90,7 @@ a {
 
 /* Lists */
 
-ul {
-  list-style-position: inside;
-}
-
 li {
-  margin-bottom: 0.83em;
-
   /*
   &:before {
     color: $link-color;
@@ -128,4 +116,9 @@ ul ul {
 
 .article-date {
   color: $footer-color;
+}
+
+.skip-link {
+  border: 1px $link-color solid;
+  padding: 1em;
 }
