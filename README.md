@@ -1,6 +1,7 @@
-# Misun Pelican theme
+# Misun: A theme for Pelican
 
-Misun is a pelican theme designed for <https://sorebit.github.io>.
+Misun is a [Pelican](https://github.com/getpelican/pelican) theme designed for 
+<https://sorebit.github.io>. It aims for high readability, accessibility and light design.
 
 For this theme to work the plugins are *required*.
 
