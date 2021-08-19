@@ -18,9 +18,9 @@
     <footer>{{ article.footer }}</footer>
     {% endif %}
   </article>
-  {# footer menu #}
-  <p class="nav">
-    <a href="/{{ article.category.url }}">&#8592; ({{ article.category }})</a>,
-    <a href="/">(home)</a>
-  </p>
+{% endblock %}
+
+{% block footnav %}
+  <a href="/{{ article.category.url }}">&#8592; ({{ article.category }})</a>,
+  <a href="/">(home)</a>
 {% endblock %}
