@@ -14,6 +14,7 @@ $font-stack-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "C
 /* Monospace mixin. TODO: Check on other browsers. */
 @mixin mono {
   font-family: $font-stack-mono;
+  font-size: smaller;
 }
 
 /* Layout */
@@ -44,7 +45,6 @@ nav {
 /* Footer nav, maybe nav in general */
 .nav {
   @include mono;
-  font-size: .81rem;
 }
 
 .skip-link {
@@ -98,7 +98,7 @@ hr {
   height: 1px;
 }
 
-/* Headers */
+/* Headings */
 /* TODO: Font sizes */
 
 h1, h2, h3,
@@ -114,11 +114,11 @@ h1 {
 }
 
 h2 {
-  font-size: 1.588rem; /* default: 1.5rem; */
+  font-size: 1.5rem; /* default: 1.5rem; */
 }
 
 h3 {
-  font-size: 1.26rem; /* default: 1.17rem */
+  font-size: 1.25rem; /* default: 1.17rem */
 }
 
 
