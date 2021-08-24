@@ -4,17 +4,19 @@ $color-primary: #066;
 $color-primary-darker: #033;
 $color-primary-lighter: #099;
 $color-secondary: #888;
-$color-bg-misc: #f1f2f1;
+$color-bg-misc: #f4f5f4;
 
 /* Fonts */
 $font-stack-text: -apple-system, Helvetica, "Open Sans", Roboto, Verdana, Sans-Serif;
 $font-stack-headers: "Lato", “Lucida Grande”, "Segoe UI", Sans-Serif;
 $font-stack-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;;
 
+$code-border-radius: .25em;
+
 /* Monospace mixin. TODO: Check on other browsers. */
 @mixin mono {
   font-family: $font-stack-mono;
-  font-size: smaller;
+  font-size: .85em;
 }
 
 /* Layout */
@@ -75,12 +77,23 @@ p, img {
   margin: 0 0 1rem 0;
 }
 
-/* TODO: code, pre */
 code {
   @include mono;
-  padding: 0.2em 0.4em;
+  padding: .2em .4em;
   background-color: $color-bg-misc;
-  border-radius: .2em;
+  border-radius: $code-border-radius;
+}
+
+pre {
+  background-color: $color-bg-misc;
+  padding: .6em 1em;
+  border-radius: $code-border-radius;
+  overflow-x: auto;
+
+  code {
+    padding: 0;
+    background: none;
+  }
 }
 
 /* TODO: Blockquotes */
@@ -91,11 +104,10 @@ blockquote {
 
 hr {
   margin: 4em auto;
-  text-align: center;
-  max-width: 300px;
-  border: 0px solid $color-primary-lighter;
-  background-color: $color-primary-lighter;
   height: 1px;
+  max-width: 300px;
+  border: 0 solid $color-primary-lighter;
+  background-color: $color-primary-lighter;
 }
 
 /* Headings */
