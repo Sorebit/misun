@@ -49,9 +49,13 @@ nav {
   @include mono;
 }
 
-.skip-link {
-  border: 1px $color-primary solid;
-  padding: 1em;
+/* Skip-link */
+
+.skip {
+  position: absolute;
+  transform: translateY(-100%);
+
+  &:focus { transform: translateY(0%); }
 }
 
 /* Content */
