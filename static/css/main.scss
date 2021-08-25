@@ -116,12 +116,12 @@ hr {
 /* Headings */
 /* TODO: Font sizes */
 
-h1, h2, h3,
-/*h4, h5, h6, */
+h1, h2, h3, h4,
+/* h5, h6, */
 header {
   font-family: $font-stack-headers;
   color: $color-text;
-  margin: 1.33em 0;
+  margin: 1.33em 0 .66em 0;
   font-weight: 600;
 }
 
@@ -134,8 +134,8 @@ header {
   h6: .67rem
 */
 
-h1 { font-size: 2rem; margin: 0.83em 0; }
-h2 { font-size: 1.5rem; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; margin-top: 1.66em; }
 h3 { font-size: 1.25rem; }
 h4 { font-size: 1rem; }
 
