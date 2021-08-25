@@ -89,6 +89,7 @@ pre {
   padding: .6em 1em;
   border-radius: $code-border-radius;
   overflow-x: auto;
+  line-height: 1.2;
 
   code {
     padding: 0;
@@ -101,6 +102,8 @@ blockquote {
   font-style: italic;
   color: $color-secondary;
 }
+
+/* Thematic break */
 
 hr {
   margin: 4em auto;
@@ -118,33 +121,30 @@ h1, h2, h3,
 header {
   font-family: $font-stack-headers;
   color: $color-text;
-  margin: 0.83em 0;
+  margin: 1.33em 0;
+  font-weight: 600;
 }
 
-h1 {
-  font-size: 2rem; /* default: 2.0rem; */
-}
-
-h2 {
-  font-size: 1.5rem; /* default: 1.5rem; */
-}
-
-h3 {
-  font-size: 1.25rem; /* default: 1.17rem */
-}
-
-
-/* NOTE: Unused */
-/*
-h4 {} default: 1.0rem
-h5 {} default: .83rem
-h6 {} default: .67rem
+/* Defaults:
+  h1: 2.0rem
+  h2: 1.5rem
+  h3: 1.17rem
+  h4: 1.0rem
+  h5: .83rem
+  h6: .67rem
 */
+
+h1 { font-size: 2rem; margin: 0.83em 0; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1rem; }
+
+/* NOTE: Unused h5, h6*/
 
 /* NOTE: header is used only for nav */
 header {
   font-size: 1.5rem;
-  font-weight: bolder;
+  margin: 0.66em 0;
 
   a, a:hover, a:active {
     color: $color-text;
@@ -152,13 +152,14 @@ header {
   }
 }
 
+/* NOTE: Used under article h1 and in previews */
+
 .article-date {
   color: $color-secondary;
 }
 
 .preview {
   h3 {
-    font-size: 1.25rem;
     margin-bottom: 0.415rem;
   }
 }
