@@ -4,8 +4,9 @@ $color-heading: #111;
 $color-primary: #066;
 $color-primary-darker: #033;
 $color-primary-lighter: #099;
-$color-secondary: #888;
+$color-secondary: #666;
 $color-bg-misc: #f4f5f4;
+$color-border: #e6e7e5;
 
 /* Fonts */
 $font-stack-text: -apple-system, Helvetica, "Open Sans", Roboto, Verdana, Sans-Serif;
@@ -20,6 +21,11 @@ $font-stack-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "C
 }
 
 $code-border-radius: .25em;
+
+/* UTILITIES */
+
+.fr { float: right; }
+.cs { color: $color-secondary; }
 
 /* Layout */
 
@@ -49,6 +55,10 @@ nav {
 /* Footer nav, maybe nav in general */
 .nav {
   @include mono;
+}
+
+p.nav {
+  margin-top: 2.5rem;
 }
 
 /* Skip-link */
@@ -110,11 +120,11 @@ pre {
   }
 }
 
-/* TODO: Blockquotes */
 blockquote {
   font-style: italic;
-  padding: 0 .66em;
-  border-left: .5em solid $color-bg-misc;
+  padding: 0 1em;
+  margin: 1.66em 0;
+  border-left: .5em solid $color-border;
 }
 
 /* Thematic break */
@@ -172,9 +182,26 @@ header {
   color: $color-secondary;
 }
 
+.articles-notes {
+  display: grid;
+  gap: 0 2rem;
+  grid-template-columns: 1fr 1fr;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
 .preview {
+  border-bottom: 1px solid $color-border;
+  margin: 1.33em 0;
+
   h3 {
-    margin-bottom: 0.415rem;
+    margin-top: 0;
+    margin-bottom: .25em;
+  }
+  .meta {
+    margin-bottom: 1em;
   }
 }
 
