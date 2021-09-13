@@ -1,3 +1,8 @@
+/* Settings? */
+$font-size: 17px;
+$line-height: 1.61em;
+$content-width: 1024px;
+
 /* Colors */
 $color-text: #333;
 $color-heading: #111;
@@ -6,7 +11,7 @@ $color-primary-darker: #033;
 $color-primary-lighter: #099;
 $color-secondary: #666;
 $color-bg-misc: #f4f5f4;
-$color-border: #e6e7e5;
+$color-border: #e2e4e2;
 
 /* Fonts */
 $font-stack-text: -apple-system, Helvetica, "Open Sans", Roboto, Verdana, Sans-Serif;
@@ -22,25 +27,23 @@ $font-stack-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "C
 
 $code-border-radius: .25em;
 
-/* UTILITIES */
+/* Utilities */
 
 .fr { float: right; }
 .cs { color: $color-secondary; }
+.ct { text-align: center; }
 
 /* Layout */
 
 html, body {
   font-family: $font-stack-text;
-}
-
-html, body {
-  font-size: 17px;
-  line-height: 1.61em;
+  font-size: $font-size;
+  line-height: $line-height;
   color: $color-text;
 }
 
 .container {
-  max-width: 1024px;
+  max-width: $content-width;
   margin: 0 auto;
   padding: 0 1rem;
   height: auto;
@@ -68,7 +71,7 @@ p.nav {
   transform: translateY(-100%);
   background-color: $color-primary;
   color: #fff;
-  padding: .66em;
+  padding: .5em;
 
   &:focus { transform: translateY(0%); }
 }
@@ -92,11 +95,12 @@ img {
   max-width: 100%;
 }
 
-p, img {
+p {
   margin: 0 0 1rem 0;
 }
 
-img {
+/* Rounded corners */
+img, code, pre, table {
   border-radius: $code-border-radius;
 }
 
@@ -104,13 +108,12 @@ code {
   @include mono;
   padding: .2em .4em;
   background-color: $color-bg-misc;
-  border-radius: $code-border-radius;
+  font-style: normal;
 }
 
 pre {
   background-color: $color-bg-misc;
   padding: .6em 1em;
-  border-radius: $code-border-radius;
   overflow-x: auto;
   line-height: 1.2;
 
@@ -125,6 +128,14 @@ blockquote {
   padding: 0 1em;
   margin: 1.66em 0;
   border-left: .5em solid $color-border;
+
+  cite {
+    color: $color-secondary;
+
+    &:before {
+      content: '— ';
+    }
+  }
 }
 
 /* Thematic break */
@@ -137,6 +148,23 @@ hr {
   background-color: $color-primary-lighter;
 }
 
+/* Tables */
+table {
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+/* Table responsivity fix */
+.tab-res {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+td, th {
+  border: 1px solid $color-border;
+  padding: .4em;
+}
+
 /* Headings */
 /* TODO: Font sizes */
 
@@ -145,7 +173,7 @@ h1, h2, h3, h4,
 header {
   font-family: $font-stack-headers;
   color: $color-heading;
-  margin: 1.33em 0 .66em 0;
+  margin: 1.25em 0 .5em 0;
   font-weight: 600;
 }
 
@@ -159,7 +187,7 @@ header {
 */
 
 h1 { font-size: 2rem; }
-h2 { font-size: 1.5rem; margin-top: 1.66em; }
+h2 { font-size: 1.5rem; margin-top: 1.75em; }
 h3 { font-size: 1.25rem; }
 h4 { font-size: 1rem; }
 
@@ -168,7 +196,7 @@ h4 { font-size: 1rem; }
 /* NOTE: header is used only for nav */
 header {
   font-size: 1.5rem;
-  margin: 0.66em 0;
+  margin: .5em 0;
 
   a, a:hover, a:active {
     color: $color-heading;
@@ -194,7 +222,7 @@ header {
 
 .preview {
   border-bottom: 1px solid $color-border;
-  margin: 1.33em 0;
+  margin: 1.25em 0;
 
   h3 {
     margin-top: 0;
