@@ -2,6 +2,7 @@
 $font-size: 17px;
 $line-height: 1.61em;
 $content-width: 1024px;
+$border-radius: .25em;
 
 /* Colors */
 $color-text: #333;
@@ -24,8 +25,6 @@ $font-stack-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "C
   font-family: $font-stack-mono;
   font-size: .85em;
 }
-
-$code-border-radius: .25em;
 
 /* Utilities */
 
@@ -68,7 +67,7 @@ p.nav {
 
 .skip {
   position: absolute;
-  transform: translateY(-100%);
+  transform: translateY(-200%);
   background-color: $color-primary;
   color: #fff;
   padding: .5em;
@@ -101,7 +100,7 @@ p {
 
 /* Rounded corners */
 img, code, pre, table {
-  border-radius: $code-border-radius;
+  border-radius: $border-radius;
 }
 
 code {
